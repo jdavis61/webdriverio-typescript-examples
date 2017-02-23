@@ -5,5 +5,6 @@ export default class Google {
   gotoHomePage() {
     browser.url('/');
   }
+
   
 }

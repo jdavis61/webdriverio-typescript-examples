@@ -2,9 +2,13 @@
 var Google = (function () {
     function Google() {
     }
+    Object.defineProperty(Google.prototype, "searchField", {
+        get: function () { return browser.$('#lst-ib'); },
+        enumerable: true,
+        configurable: true
+    });
     Google.prototype.gotoHomePage = function () {
         browser.url('/');
-        browser.pause(10000);
     };
     return Google;
 }());

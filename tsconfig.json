@@ -5,9 +5,9 @@
         "noImplicitAny": false,
         "sourceMap": false
     },
-    "filesGlob": [
-      "./pages/**/*",
-      "./test/**/*"
+    "files": [
+      "pages/Google.ts",
+      "test/**/*"
     ]
 
 }
