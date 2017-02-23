@@ -1,0 +1,49 @@
+{
+  "name": "webdriverio-typescript-samples",
+  "version": "2.0.0",
+  "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio wdio.conf.js",
+    "lint": "tslint --fix src/**/*.ts",
+    "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib",
+    "build": "npm run lint && rimraf lib && npm run moveJsonFiles && tsc --outDir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdavis61/webdriverio-typescript-examples.git"
+  },
+  "keywords": [
+    "webdriverio",
+    "selenium",
+    "nodejs",
+    "ts",
+    "typescript"
+  ],
+  "author": "James Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdavis61/webdriverio-typescript-examples/issues"
+  },
+  "homepage": "https://github.com/jdavis61/webdriverio-typescript-examples#readme",
+  "dependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.32",
+    "@types/webdriverio": "^4.4.0",
+    "chai": "^4.1.2",
+    "it-each": "^0.4.0",
+    "webdriverio": "^4.13.1"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.0.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.7.0",
+    "typescript": "^2.2.1",
+    "wdio-dot-reporter": "^0.0.9",
+    "wdio-mocha-framework": "^0.5.8",
+    "wdio-selenium-standalone-service": "^0.0.10",
+    "wdio-spec-reporter": "^0.1.4"
+  }
+}

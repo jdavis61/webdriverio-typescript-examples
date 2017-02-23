@@ -1,0 +1,10 @@
+{
+  "login": "#username",
+  "securedPage": "a.radius",
+  "checkboxes": "#checkboxes",
+  "hovers": ".figure",
+  "userprofile": "#c",
+  "javascriptAlertPage": "button[onclick='jsConfirm()']",
+  "keyPresses": "//*[text() = 'Key Presses']",
+  "nestedFrames": "frame[name='frame-top']"
+}
