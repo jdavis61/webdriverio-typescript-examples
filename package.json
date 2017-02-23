@@ -1,0 +1,38 @@
+{
+  "name": "webdriverio-typescript-samples",
+  "version": "1.0.0",
+  "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdavis61/webdriverio-typescript-samples.git"
+  },
+  "keywords": [
+    "webdriverio",
+    "selenium",
+    "nodejs",
+    "ts",
+    "typescript"
+  ],
+  "author": "James Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdavis61/webdriverio-typescript-samples/issues"
+  },
+  "homepage": "https://github.com/jdavis61/webdriverio-typescript-samples#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1",
+    "typings": "^2.1.0",
+    "wdio-browserstack-service": "^0.1.4",
+    "wdio-dot-reporter": "0.0.7",
+    "wdio-mocha-framework": "^0.5.8",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "wdio-spec-reporter": "0.0.5",
+    "webdriverio": "^4.6.2"
+  }
+}
