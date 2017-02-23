@@ -1,6 +1,11 @@
 # webdriverio-typescript-samples
+
+First attempt at using typescript with webdriver.io
+
+# REFS
 https://github.com/jonnyreeves/hello-ts-mocha/blob/master/test/CalculatorTest.ts
 
+# TYPINGS (essential, otherwise typescript will not work with webdriverio (or node) at all)
 https://github.com/typings/typings
 
 618  npm install --save typings
