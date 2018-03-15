@@ -10,7 +10,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/**/*.js'
+        './src/test/**/*.ts'
     ],
     // Patterns to exclude.
     exclude: [
@@ -75,7 +75,7 @@ exports.config = {
     // use when testing locally to avoid DDOSing the herokuapp. See README at
     // https://github.com/tourdedave/the-internet for instructions on how to
     // install locally
-    baseUrl: 'https://www.google.com',
+    baseUrl: 'http://localhost:9292',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

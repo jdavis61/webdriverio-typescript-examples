@@ -4,7 +4,7 @@
   "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -24,15 +24,18 @@
   },
   "homepage": "https://github.com/jdavis61/webdriverio-typescript-samples#readme",
   "dependencies": {
-    "chai": "^3.5.0",
-    "ts-node": "^2.1.0",
+    "@types/chai": "^4.1.2",
+    "@types/mocha": "^2.2.32",
+    "@types/webdriverio": "^4.4.0",
+    "chai": "^4.1.2",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
     "typescript": "^2.2.1",
-    "typings": "^2.1.0",
     "wdio-browserstack-service": "^0.1.4",
-    "wdio-dot-reporter": "0.0.7",
+    "wdio-dot-reporter": "0.0.9",
     "wdio-mocha-framework": "^0.5.8",
-    "wdio-selenium-standalone-service": "0.0.8",
-    "wdio-spec-reporter": "0.0.5",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-spec-reporter": "0.1.4",
     "webdriverio": "^4.6.2"
   }
 }
