@@ -1,4 +1,4 @@
-import NavMenu from '../pages/navigationMenu';
+import NavMenu from '../pages/NavigationMenu';
 
 describe('Nav menu', () => {
 

@@ -1,4 +1,4 @@
-import Google from '../pages/google';
+import Google from '../pages/Google';
 
 describe('Google basic search', () => {
 

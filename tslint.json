@@ -1,0 +1,14 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint-eslint-rules"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": [],
+    "env": {
+        "webdriverio/wdio": true,
+        "mocha": true,
+        "browser": true
+      }
+}
