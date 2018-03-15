@@ -2,6 +2,7 @@ import { assert } from 'chai';
 import NavigationMenu from '../pages/NavigationMenu';
 import CheckboxesPage from '../pages/Checkboxes';
 
+// Test
 describe('Add command test', () => {
     it('Checkboxes test', () => {
         const navMenu = new NavigationMenu();
