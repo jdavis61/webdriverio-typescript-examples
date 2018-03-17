@@ -130,7 +130,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         compilers: ['ts:ts-node/register'],
-        timeout: 30000
+        timeout: 9999999
     },
     //
     // =====
@@ -153,7 +153,13 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
     before: function (capabilities, specs) {
-        browser.windowHandleSize({width:1280,height:800});
+        const width = browser.execute(() => {
+            return window.screen.availWidth;
+        }).value;
+        const height = browser.execute(() => {
+            return window.screen.availHeight;
+        }).value;
+        browser.windowHandleSize({width, height});
     },
     //
     // Hook that gets executed before the suite starts
