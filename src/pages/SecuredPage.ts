@@ -7,7 +7,7 @@ export default class SecuredPage extends BasePage {
     }
 
     public get logoutButton() {
-        const logoutButtonLocator: string = 'a.radius';s;
+        const logoutButtonLocator: string = 'a.radius';
         return $(logoutButtonLocator);
     }
 
