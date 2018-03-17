@@ -1,13 +1,13 @@
 import { assert } from 'chai';
 import NavigationMenu from '../pages/NavigationMenu';
-import JavaScriptAlertsPage from '../pages/JavascriptAlerts';
+import JavascriptAlerts from '../pages/JavascriptAlerts';
 
 describe('JavaScript Alert test', () => {
 
     let jsAlert : JavaScriptAlertsPage;
     before('setup', () => {
         jsAlert = new JavaScriptAlertsPage();
-        let navMenu: NavigationMenu = new NavigationMenu();
+        const navMenu: NavigationMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();
         navMenu.clickJavaScriptAlertsPage();
     });

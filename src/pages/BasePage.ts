@@ -1,4 +1,4 @@
-var locators = require('../selectors/basePage.json');
+const locators = require('../selectors/basePage.json');
 
 export default class BasePage {
     public get subheader() {
@@ -18,8 +18,8 @@ export default class BasePage {
     }
 
     public getPageHeader() {
-        let h2Selector: string = 'div.example h2';
-        let h3Selector: string = 'div.example h3';
+        const h2Selector: string = 'div.example h2';
+        const h3Selector: string = 'div.example h3';
         if (browser.$$(locators.h2Selector).length > 0) {
             return $(h2Selector).getText();
         }

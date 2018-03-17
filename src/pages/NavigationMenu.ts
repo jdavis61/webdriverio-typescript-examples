@@ -1,4 +1,4 @@
-var screenLocators = require('../selectors/screenPresenceLocators.json');
+const screenLocators = require('../selectors/screenPresenceLocators.json');
 
 export default class NavigationMenu {
     public loadNavigationMenu() {

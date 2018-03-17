@@ -1,14 +1,12 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint-eslint-rules"
+        "tslint-config-airbnb"
     ],
     "jsRules": {},
-    "rules": {},
-    "rulesDirectory": [],
-    "env": {
-        "webdriverio/wdio": true,
-        "mocha": true,
-        "browser": true
-      }
+    "rules": {
+        "ter-indent": [true, 4],
+        "max-line-length": [ true, 121 ]
+    },
+    "rulesDirectory": []
 }

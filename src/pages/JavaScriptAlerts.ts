@@ -1,5 +1,5 @@
 import BasePage from './BasePage';
-var selectors = require('../selectors/javascriptAlerts.json');
+const selectors = require('../selectors/javascriptAlerts.json');
 
 export default class JavaScriptAlertsPage extends BasePage {
     constructor() {

@@ -4,7 +4,8 @@
   "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
   "main": "index.js",
   "scripts": {
-    "test": "wdio wdio.conf.js"
+    "test": "wdio wdio.conf.js",
+    "lint": "tslint --fix src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,6 @@
     "@types/webdriverio": "^4.4.0",
     "chai": "^4.1.2",
     "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
     "typescript": "^2.2.1",
     "wdio-browserstack-service": "^0.1.4",
     "wdio-dot-reporter": "0.0.9",
@@ -37,5 +37,9 @@
     "wdio-selenium-standalone-service": "0.0.10",
     "wdio-spec-reporter": "0.1.4",
     "webdriverio": "^4.6.2"
+  },
+  "devDependencies": {
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.7.0"
   }
 }
