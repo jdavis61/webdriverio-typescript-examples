@@ -1,7 +1,7 @@
 import BasePage from './BasePage';
 const selectors = require('../selectors/javascriptAlerts.json');
 
-export default class JavaScriptAlertsPage extends BasePage {
+export default class JavaScriptAlerts extends BasePage {
     constructor() {
         super();
     }

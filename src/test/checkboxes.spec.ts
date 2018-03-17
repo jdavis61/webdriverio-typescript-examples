@@ -6,7 +6,7 @@ import Checkboxes from '../pages/Checkboxes';
 describe('Add command test', () => {
     it('Checkboxes test', () => {
         const navMenu = new NavigationMenu();
-        const checkboxPage = new CheckboxesPage();
+        const checkboxPage = new Checkboxes();
         navMenu.loadNavigationMenu();
         navMenu.clickCheckboxesPage();
         assert.equal(checkboxPage.getPageHeader(), 'Checkboxes');
