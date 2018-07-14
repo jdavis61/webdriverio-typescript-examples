@@ -4,9 +4,14 @@ import Checkboxes from '../pages/Checkboxes';
 
 // Test
 describe('Add command test', () => {
+    let navMenu;
+    let checkboxPage;
+    before('setup', () => {
+        navMenu = new NavigationMenu();
+        checkboxPage = new Checkboxes();
+    });
+
     it('Checkboxes test', () => {
-        const navMenu = new NavigationMenu();
-        const checkboxPage = new Checkboxes();
         navMenu.loadNavigationMenu();
         navMenu.clickCheckboxesPage();
         assert.equal(checkboxPage.getPageHeader(), 'Checkboxes');
