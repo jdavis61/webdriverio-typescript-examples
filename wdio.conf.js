@@ -152,7 +152,7 @@ exports.config = {
     //
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
-    before: function (capabilities, specs) {
+    before: function () {
         const width = browser.execute(() => {
             return window.screen.availWidth;
         }).value;
@@ -160,6 +160,9 @@ exports.config = {
             return window.screen.availHeight;
         }).value;
         browser.windowHandleSize({width, height});
+
+        var chai = require('chai');
+        chai.Should();
     },
     //
     // Hook that gets executed before the suite starts

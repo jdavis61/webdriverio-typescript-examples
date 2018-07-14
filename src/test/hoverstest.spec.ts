@@ -1,4 +1,3 @@
-import { assert } from 'chai';
 import NavigationMenu from '../pages/NavigationMenu';
 import HoversPage from '../pages/HoversPage';
 
@@ -10,7 +9,7 @@ describe('Hovers test', () => {
             navMenu.loadNavigationMenu();
             navMenu.clickHoversPage();
             hoversPage.hoverOverImage(i);
-            assert.equal(hoversPage.getUserName(i), `user${i + 1}`);
+            hoversPage.getUserName(i).should.be.equal(`user${i + 1}`);
             hoversPage.clickViewProfile(i);
             hoversPage.returnToHoversPage();
         }

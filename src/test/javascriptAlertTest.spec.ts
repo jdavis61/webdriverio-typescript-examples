@@ -13,17 +13,17 @@ describe('JavaScript Alert test', () => {
     });
 
     it('JavaScript Alert test', () => {
-        assert.equal(jsAlert.getPageHeader(), 'JavaScript Alerts');
+        jsAlert.getPageHeader().should.be.equal('JavaScript Alerts');
         jsAlert.clickJSAlertButton();
         jsAlert.closeAlert();
-        assert.equal(jsAlert.getResult(), 'You successfuly clicked an alert');
+        jsAlert.getResult().should.be.equal('You successfuly clicked an alert');
     });
 
     it('JavaScript confirm test', () => {
-        assert.equal(jsAlert.getPageHeader(), 'JavaScript Alerts');
+        jsAlert.getPageHeader().should.be.equal('JavaScript Alerts');
         jsAlert.clickJSConfirmButton();
         jsAlert.closeAlert();
-        assert.equal(jsAlert.getResult(), 'You clicked: Ok');
+        jsAlert.getResult().should.be.equal('You clicked: Ok');
     });
 });
 

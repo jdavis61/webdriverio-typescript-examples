@@ -25,18 +25,18 @@ describe('Login functionality test suite', () => {
 
     it('Login Test', () => {
         const msg = pageProperties.loginSubheader;
-        assert.equal(loginPage.getPageHeader(), 'Login Page', 'Page header equals login.');
-        assert.equal(loginPage.getPageSubHeader(), msg, 'Subheader is correct');
-        assert.equal(loginPage.getFooterText(), 'Powered by Elemental Selenium');
+        loginPage.getPageHeader().should.be.equal('Login Page', 'Page header equals login.');
+        loginPage.getPageSubHeader().should.be.equal(msg, 'Subheader is correct');
+        loginPage.getFooterText().should.be.equal('Powered by Elemental Selenium');
 
         loginPage.login(username, password);
-        assert.equal(securedPage.getPageMessage(), 'You logged into a secure area!', 'Secured are msg visible.');
-        assert.equal(securedPage.getPageHeader(), 'Secure Area', 'Page header = Secure Area');
-        assert.equal(securedPage.getFooterText(), 'Powered by Elemental Selenium');
+        securedPage.getPageMessage().should.be.equal('You logged into a secure area!', 'Secured are msg visible.');
+        securedPage.getPageHeader().should.be.equal('Secure Area', 'Page header = Secure Area');
+        securedPage.getFooterText().should.be.equal('Powered by Elemental Selenium');
 
         securedPage.clickLogout();
-        assert.notEqual(securedPage.getPageHeader(), 'Secure Area', 'Logoff redirects to Login Page');
-        assert.equal(securedPage.getPageMessage(), 'You logged out of the secure area!');
+        securedPage.getPageHeader().should.not.be.equal('Secure Area', 'Logoff redirects to Login Page');
+        securedPage.getPageMessage().should.be.equal('You logged out of the secure area!');
     });
 
     it('Validation Message Test', () => {
@@ -49,18 +49,18 @@ describe('Login functionality test suite', () => {
         loginPage.username.setValue(username);
         loginPage.password.setValue(incorrectPassword);
         loginPage.clickSubmitButton();
-        assert.equal(loginPage.getPageMessage(), passwordErrorMessage);
+        loginPage.getPageMessage().should.be.equal(passwordErrorMessage);
 
         // Submit blank form
         loginPage.enterLoginInformation('', '');
         loginPage.clickSubmitButton();
-        assert.equal(loginPage.getPageMessage(), usernameErrorMessage);
+        loginPage.getPageMessage().should.be.equal(usernameErrorMessage);
     });
 
     it('Close Validation Message Test', () => {
         loginPage.enterLoginInformation(incorrectUsername, incorrectPassword);
         loginPage.clickSubmitButton();
-        assert.equal(loginPage.getPageMessage(), usernameErrorMessage);
+        loginPage.getPageMessage().should.be.equal(usernameErrorMessage);
         loginPage.closePageMessage();
 
         let isCloseButtonClicked : boolean = false;
@@ -68,7 +68,7 @@ describe('Login functionality test suite', () => {
             loginPage.closePageMessage();
             isCloseButtonClicked = true;
         } catch (err) {
-            assert.notEqual(isCloseButtonClicked, true);
+            isCloseButtonClicked.should.be.equal(false);
         }
     });
 });
