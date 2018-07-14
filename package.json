@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
-    "lint": "tslint --fix src/**/*.ts"
+    "lint": "tslint --fix src/**/*.ts",
+    "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib",
+    "build": "npm run moveJsonFiles && tsc --outDir lib"
   },
   "repository": {
     "type": "git",
@@ -29,17 +31,17 @@
     "@types/mocha": "^2.2.32",
     "@types/webdriverio": "^4.4.0",
     "chai": "^4.1.2",
-    "ts-node": "^5.0.1",
-    "typescript": "^2.2.1",
-    "wdio-browserstack-service": "^0.1.4",
-    "wdio-dot-reporter": "0.0.9",
-    "wdio-mocha-framework": "^0.5.8",
-    "wdio-selenium-standalone-service": "0.0.10",
-    "wdio-spec-reporter": "0.1.4",
     "webdriverio": "^4.6.2"
   },
   "devDependencies": {
+    "copyfiles": "^2.0.0",
+    "ts-node": "^5.0.1",
     "tslint": "^5.9.1",
-    "tslint-config-airbnb": "^5.7.0"
+    "tslint-config-airbnb": "^5.7.0",
+    "typescript": "^2.2.1",
+    "wdio-dot-reporter": "0.0.9",
+    "wdio-mocha-framework": "^0.5.8",
+    "wdio-selenium-standalone-service": "0.0.10",
+    "wdio-spec-reporter": "0.1.4"
   }
 }

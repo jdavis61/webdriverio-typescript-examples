@@ -9,10 +9,12 @@
         "noImplicitAny": false,
     },
     "include": [
-      "src/pages/google.ts",
-      "src/test/**/*"
+      "src/pages/**/*",
+      "src/test/**/*",
+      "src/interfaces/**/*",
     ],
     "exclude": [
         "node_modules",
+        "src/concepts"
     ]
 }
