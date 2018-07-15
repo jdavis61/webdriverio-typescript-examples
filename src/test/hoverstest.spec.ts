@@ -10,8 +10,6 @@ describe('Hovers test', () => {
             navMenu.loadHoversPage();
             hoversPage.hoverOverImage(i);
             hoversPage.getUserName(i).should.be.equal(`user${i + 1}`);
-            hoversPage.clickViewProfile(i);
-            hoversPage.returnToHoversPage();
         }
     });
 });
