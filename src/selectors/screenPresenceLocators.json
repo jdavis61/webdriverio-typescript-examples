@@ -4,5 +4,6 @@
   "checkboxes": "#checkboxes",
   "hovers": ".figure",
   "userprofile": "#c",
-  "javascriptAlertPage": "button[onclick='jsConfirm()']"
+  "javascriptAlertPage": "button[onclick='jsConfirm()']",
+  "keyPresses": "//*[text() = 'Key Presses']"
 }

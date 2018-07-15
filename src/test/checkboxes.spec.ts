@@ -2,7 +2,7 @@ import NavigationMenu from '../pages/NavigationMenu';
 import Checkboxes from '../pages/Checkboxes';
 
 // Test
-describe('Add command test', () => {
+describe('Checkboxes test', () => {
     let navMenu;
     let checkboxPage;
     before('setup', () => {
@@ -10,9 +10,9 @@ describe('Add command test', () => {
         checkboxPage = new Checkboxes();
     });
 
-    it('Checkboxes test', () => {
+    it('Checkboxes state test', () => {
         navMenu.loadNavigationMenu();
-        navMenu.clickCheckboxesPage();
+        navMenu.loadCheckboxesPage();
         checkboxPage.getPageHeader().should.equal('Checkboxes');
         checkboxPage.checkboxOne.isSelected().should.be.false;
         checkboxPage.checkboxTwo.isSelected().should.be.true;

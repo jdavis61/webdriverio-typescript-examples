@@ -1,27 +1,33 @@
 const screenLocators = require('../selectors/screenPresenceLocators.json');
 
 export default class NavigationMenu {
+
     public loadNavigationMenu() {
         browser.url('/');
     }
 
-    public clickFormAuthentication() {
+    public loadFormAuthenticationPage() {
         browser.url('/login');
         browser.waitForVisible(screenLocators.login);
     }
 
-    public clickCheckboxesPage() {
+    public loadCheckboxesPage() {
         browser.url('/checkboxes');
         browser.waitForVisible(screenLocators.checkboxes);
     }
 
-    public clickHoversPage() {
+    public loadHoversPage() {
         browser.url('/hovers');
         browser.waitForVisible(screenLocators.hovers);
     }
 
-    public clickJavaScriptAlertsPage() {
+    public loadJavaScriptAlertsPage() {
         browser.url('/javascript_alerts');
         browser.waitForVisible(screenLocators.javascriptAlertPage);
+    }
+
+    public loadKeyPressesPage() {
+        browser.url('/key_presses');
+        browser.waitForVisible(screenLocators.keyPresses);
     }
 }

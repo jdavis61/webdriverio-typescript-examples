@@ -7,7 +7,7 @@ describe('Hovers test', () => {
             const navMenu = new NavigationMenu();
             const hoversPage = new HoversPage();
             navMenu.loadNavigationMenu();
-            navMenu.clickHoversPage();
+            navMenu.loadHoversPage();
             hoversPage.hoverOverImage(i);
             hoversPage.getUserName(i).should.be.equal(`user${i + 1}`);
             hoversPage.clickViewProfile(i);

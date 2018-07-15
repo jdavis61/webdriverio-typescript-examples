@@ -20,18 +20,18 @@ describe('Login functionality test suite', () => {
         loginPage = new LoginPage();
         securedPage = new SecuredPage();
         navMenu.loadNavigationMenu();
-        navMenu.clickFormAuthentication();
+        navMenu.loadFormAuthenticationPage();
     });
 
     it('Login Test', () => {
         const msg = pageProperties.loginSubheader;
-        loginPage.getPageHeader().should.be.equal('Login Page', 'Page header equals login.');
+        loginPage.getPageHeader().should.be.equal('Login Page');
         loginPage.getPageSubHeader().should.be.equal(msg, 'Subheader is correct');
         loginPage.getFooterText().should.be.equal('Powered by Elemental Selenium');
 
         loginPage.login(username, password);
-        securedPage.getPageMessage().should.be.equal('You logged into a secure area!', 'Secured are msg visible.');
-        securedPage.getPageHeader().should.be.equal('Secure Area', 'Page header = Secure Area');
+        securedPage.getPageMessage().should.be.equal('You logged into a secure area!');
+        securedPage.getPageHeader().should.be.equal('Secure Area');
         securedPage.getFooterText().should.be.equal('Powered by Elemental Selenium');
 
         securedPage.clickLogout();

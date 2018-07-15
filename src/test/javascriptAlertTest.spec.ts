@@ -2,17 +2,17 @@ import { assert } from 'chai';
 import NavigationMenu from '../pages/NavigationMenu';
 import JavaScriptAlerts from '../pages/JavaScriptAlerts';
 
-describe('JavaScript Alert test', () => {
+describe('JavaScript alerts test', () => {
 
     let jsAlert : JavaScriptAlerts;
     before('setup', () => {
         jsAlert = new JavaScriptAlerts();
         const navMenu: NavigationMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();
-        navMenu.clickJavaScriptAlertsPage();
+        navMenu.loadJavaScriptAlertsPage();
     });
 
-    it('JavaScript Alert test', () => {
+    it('JavaScript alert test', () => {
         jsAlert.getPageHeader().should.be.equal('JavaScript Alerts');
         jsAlert.clickJSAlertButton();
         jsAlert.closeAlert();

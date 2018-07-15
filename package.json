@@ -31,6 +31,7 @@
     "@types/mocha": "^2.2.32",
     "@types/webdriverio": "^4.4.0",
     "chai": "^4.1.2",
+    "it-each": "^0.4.0",
     "webdriverio": "^4.6.2"
   },
   "devDependencies": {
