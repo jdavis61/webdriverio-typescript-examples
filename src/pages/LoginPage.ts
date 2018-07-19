@@ -2,7 +2,7 @@ import BasePage from './BasePage';
 
 const loginSelectors = require('../selectors/login.json');
 
-export default class  LoginPage extends BasePage {
+export default class LoginPage extends BasePage {
     constructor() {
         super();
     }
