@@ -1,4 +1,4 @@
-const screenLocators = require('../selectors/screenPresenceLocators.json');
+const presenceLocators = require('../selectors/screenPresenceLocators.json');
 
 export default class NavigationMenu {
 
@@ -8,26 +8,31 @@ export default class NavigationMenu {
 
     public loadFormAuthenticationPage() {
         browser.url('/login');
-        browser.waitForVisible(screenLocators.login);
+        browser.waitForVisible(presenceLocators.login);
     }
 
     public loadCheckboxesPage() {
         browser.url('/checkboxes');
-        browser.waitForVisible(screenLocators.checkboxes);
+        browser.waitForVisible(presenceLocators.checkboxes);
     }
 
     public loadHoversPage() {
         browser.url('/hovers');
-        browser.waitForVisible(screenLocators.hovers);
+        browser.waitForVisible(presenceLocators.hovers);
     }
 
     public loadJavaScriptAlertsPage() {
         browser.url('/javascript_alerts');
-        browser.waitForVisible(screenLocators.javascriptAlertPage);
+        browser.waitForVisible(presenceLocators.javascriptAlertPage);
     }
 
     public loadKeyPressesPage() {
         browser.url('/key_presses');
-        browser.waitForVisible(screenLocators.keyPresses);
+        browser.waitForVisible(presenceLocators.keyPresses);
+    }
+
+    public loadNestedFramesPage() {
+        browser.url('/nested_frames');
+        browser.waitForVisible(presenceLocators.nestedFrames);
     }
 }
