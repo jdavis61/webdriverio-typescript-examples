@@ -71,10 +71,6 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    //baseUrl: 'http://the-internet.herokuapp.com',
-    // use when testing locally to avoid DDOSing the herokuapp. See README at
-    // https://github.com/tourdedave/the-internet for instructions on how to
-    // install locally
     baseUrl: 'http://the-internet.herokuapp.com',
     //
     // Default timeout for all waitFor* commands.
