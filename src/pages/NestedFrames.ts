@@ -2,36 +2,36 @@ const selectors = require('../selectors/nestedFrames.json');
 
 export default class NestedFrames {
 
-    private getFrame(frameId) {
+    private getFrame(frameId) : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         const frame = browser.frame(frameId);
         return frame.$('html');        
     }
     
-    switchToTopFrame() {
+    switchToTopFrame() : void {
         const frameId = browser.$(selectors.topFrame).value;
         browser.frame(frameId);
     }
 
-    switchToParentFrame() {
+    switchToParentFrame() : void {
         browser.frameParent();
     }
     
-    get bottomFrame() {
+    get bottomFrame() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         const frameId = browser.$(selectors.bottomFrame).value;
         return this.getFrame(frameId);
     }
 
-    get leftFrame() {
+    get leftFrame() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         const frameId = browser.$(selectors.leftFrame).value;
         return this.getFrame(frameId);
     }
 
-    get middleFrame() {
+    get middleFrame() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         const frameId = browser.$(selectors.middleFrame).value;
         return this.getFrame(frameId);
     }
 
-    get rightFrame() {
+    get rightFrame() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         const frameId = browser.$(selectors.rightFrame).value;
         return this.getFrame(frameId);
     }

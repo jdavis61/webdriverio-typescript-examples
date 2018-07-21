@@ -1,23 +1,23 @@
 const locators = require('../selectors/basePage.json');
 
 export default class BasePage {
-    public get subheader() {
+    public get subheader() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(locators.pageSubHeaderLocator);
     }
 
-    public get footerText() {
+    public get footerText() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(locators.footerTextLocator);
     }
 
-    public get pageMessage() {
+    public get pageMessage() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(locators.pageMessageLocator);
     }
 
-    public get closeButton() {
+    public get closeButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(locators.closeButton);
     }
 
-    public getPageHeader() {
+    public getPageHeader() : string {
         const h2Selector: string = 'div.example h2';
         const h3Selector: string = 'div.example h3';
         if (browser.$$(locators.h2Selector).length > 0) {
@@ -26,19 +26,19 @@ export default class BasePage {
         return browser.$(h3Selector).getText();
     }
 
-    public getPageSubHeader() {
+    public getPageSubHeader() : string {
         return this.subheader.getText();
     }
 
-    public getFooterText() {
+    public getFooterText() : string {
         return this.footerText.getText();
     }
 
-    public getPageMessage() {
+    public getPageMessage() : string {
         return this.pageMessage.getText().split('\n')[0].trim();
     }
 
-    public closePageMessage() {
+    public closePageMessage() : void {
         this.closeButton.click();
         browser.waitUntil(() => !this.closeButton.isVisible());
     }

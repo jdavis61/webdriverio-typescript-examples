@@ -6,31 +6,31 @@ export default class JavaScriptAlerts extends BasePage {
         super();
     }
 
-    get jsAlertButton() {
+    get jsAlertButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(selectors.jsAlertButtonLocator);
     }
 
-    get jsConfirmButton() {
+    get jsConfirmButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(selectors.jsConfirmButtonLocator);
     }
 
-    get result() {
+    get result() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(selectors.resultLocator);
     }
 
-    clickJSAlertButton() {
+    clickJSAlertButton() : void {
         this.jsAlertButton.click();
     }
 
-    clickJSConfirmButton() {
+    clickJSConfirmButton() : void {
         this.jsConfirmButton.click();
     }
 
-    getResult() {
+    getResult() : string {
         return this.result.getText().trim();
     }
 
-    closeAlert() {
+    closeAlert() : void {
         browser.alertAccept();
     }
 }

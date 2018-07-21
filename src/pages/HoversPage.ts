@@ -7,23 +7,23 @@ export default class HoversPage extends BasePage {
         super();
     }
 
-    get captions() {
+    get captions() : Array<WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>> {
         const captionsLocator = '.figcaption';
         return browser.$$(captionsLocator);
     }
 
-    get figures() {
+    get figures() : Array<WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>> {
         const figureLocator = '.figure';
         return browser.$$(figureLocator);
     }
 
-    hoverOverImage(position: number) {
+    hoverOverImage(position: number) : void {
         const figure = this.figures[position];
         figure.moveToObject('img');
         this.captions[position].waitForVisible();
     }
 
-    clickViewProfile(position) {
+    clickViewProfile(position) : void {
         this.hoverOverImage(position);
         const captionSection = this.captions[position];
         const link = captionSection.$('a');
@@ -31,7 +31,7 @@ export default class HoversPage extends BasePage {
         browser.waitForVisible(screenPresenceLocators.userprofile);
     }
 
-    returnToHoversPage() {
+    returnToHoversPage() : void {
         browser.back();
         browser.waitForVisible(screenPresenceLocators.hovers);
     }

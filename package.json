@@ -1,13 +1,13 @@
 {
   "name": "webdriverio-typescript-samples",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
     "lint": "tslint --fix src/**/*.ts",
     "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib",
-    "build": "npm run moveJsonFiles && tsc --outDir lib"
+    "build": "npm run lint && npm run moveJsonFiles && tsc --outDir lib"
   },
   "repository": {
     "type": "git",
@@ -32,17 +32,17 @@
     "@types/webdriverio": "^4.4.0",
     "chai": "^4.1.2",
     "it-each": "^0.4.0",
-    "webdriverio": "^4.6.2"
+    "webdriverio": "^4.13.1"
   },
   "devDependencies": {
     "copyfiles": "^2.0.0",
     "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
+    "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.7.0",
     "typescript": "^2.2.1",
-    "wdio-dot-reporter": "0.0.9",
+    "wdio-dot-reporter": "^0.0.9",
     "wdio-mocha-framework": "^0.5.8",
-    "wdio-selenium-standalone-service": "0.0.10",
-    "wdio-spec-reporter": "0.1.4"
+    "wdio-selenium-standalone-service": "^0.0.10",
+    "wdio-spec-reporter": "^0.1.4"
   }
 }

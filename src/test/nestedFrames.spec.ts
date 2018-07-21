@@ -1,5 +1,4 @@
 import NavigationMenu from '../pages/NavigationMenu';
-import NestedFrames from '../pages/NestedFrames';
 
 // Test
 describe('Checkboxes test', () => {
@@ -7,12 +6,11 @@ describe('Checkboxes test', () => {
     let nestedFramesPage;
     before('setup', () => {
         navMenu = new NavigationMenu();
-        nestedFramesPage = new NestedFrames();
+        navMenu.loadNavigationMenu();
+        nestedFramesPage = navMenu.loadNestedFramesPage();
     });
 
     it('Nested frames test', () => {
-        navMenu.loadNavigationMenu();
-        navMenu.loadNestedFramesPage();
         nestedFramesPage.switchToTopFrame();
         nestedFramesPage.leftFrame.$('body').getText().trim().should.equal('LEFT');
         nestedFramesPage.switchToParentFrame();

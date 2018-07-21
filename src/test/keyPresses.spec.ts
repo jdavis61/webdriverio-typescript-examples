@@ -1,5 +1,4 @@
 import NavigationMenu from '../pages/NavigationMenu';
-import KeyPresses from '../pages/KeyPresses';
 require('it-each')();
 require('it-each')({ testPerIteration: true });
 
@@ -7,14 +6,11 @@ const keys = ['F5', 'a', '1', 'b', 'Alt', 'Shift'];
 
 // Valid keys found here https://w3c.github.io/webdriver/#keyboard-actions.
 describe('Key presses test', () => {
-
-    let navMenu;
     let keyPressesPage;
     before('setup', () => {
-        navMenu = new NavigationMenu();
+        const navMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();
-        navMenu.loadKeyPressesPage();
-        keyPressesPage = new KeyPresses();
+        keyPressesPage = navMenu.loadKeyPressesPage();
     });
 
     // @ts-ignore: Property 'each' does not exist on type 'ITestDefinition'.

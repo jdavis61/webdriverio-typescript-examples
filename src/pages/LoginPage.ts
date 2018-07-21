@@ -1,4 +1,5 @@
 import BasePage from './BasePage';
+import SecuredPage from './SecuredPage';
 
 const loginSelectors = require('../selectors/login.json');
 
@@ -7,24 +8,24 @@ export default class LoginPage extends BasePage {
         super();
     }
 
-    get username() {
+    get username() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(loginSelectors.usernameLocator);
     }
 
-    get password() {
+    get password() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(loginSelectors.passwordLocator);
     }
 
-    get loginButton() {
+    get loginButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
         return browser.$(loginSelectors.loginButtonLocator);
     }
 
-    enterLoginInformation(usernameValue, passwordValue) {
+    enterLoginInformation(usernameValue, passwordValue) : void {
         this.username.setValue(usernameValue);
         this.password.setValue(passwordValue);
     }
 
-    clickSubmitButton() {
+    clickSubmitButton() : void {
         // Same issue with the antivirus pop occurs with webdriverio as well as webdriver.
         // The workaround is to click with javascript to bypass the pop-up.
         try {
@@ -37,10 +38,11 @@ export default class LoginPage extends BasePage {
         }
     }
 
-    login(usernameValue, passwordValue) {
+    login(usernameValue, passwordValue) : SecuredPage {
         const securedScreenPresenceLocator = 'a.radius';
         this.enterLoginInformation(usernameValue, passwordValue);
         this.clickSubmitButton();
         browser.waitForVisible(securedScreenPresenceLocator);
+        return new SecuredPage();
     }
 }
