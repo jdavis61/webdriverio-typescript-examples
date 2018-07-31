@@ -1,7 +1,7 @@
 {
   "name": "webdriverio-typescript-samples",
   "version": "2.0.0",
-  "description": "A repo to demonstrate how to use the webdriver.io api. Tests executed against http://the-internet.herokuapp.com.",
+  "description": "Provides examples of how to use TypeScript with the webdriver.io api. Tests executed against http://the-internet.herokuapp.com..",
   "main": "index.js",
   "scripts": {
     "test": "wdio wdio.conf.js",
