@@ -9,6 +9,11 @@
     "moveJsonFiles": "copyfiles -u 1 src/selectors/* src/config/* lib",
     "build": "npm run lint && rimraf lib && npm run moveJsonFiles && tsc --outDir lib"
   },
+  "pre-commit": [
+    "lint",
+    "build",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jdavis61/webdriverio-typescript-examples.git"
@@ -36,6 +41,7 @@
     "chai": "^4.1.2",
     "copyfiles": "^2.0.0",
     "it-each": "^0.4.0",
+    "pre-commit": "^1.2.2",
     "rimraf": "^2.6.2",
     "ts-node": "^5.0.1",
     "tslint": "^5.11.0",
