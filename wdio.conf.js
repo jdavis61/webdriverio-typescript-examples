@@ -51,7 +51,6 @@ exports.config = {
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
         maxInstances: 1,
-        //
         browserName: 'chrome',
     }],
     //
