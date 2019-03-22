@@ -46,7 +46,7 @@ describe('Login functionality test suite', () => {
         loginPage.clickSubmitButton();
         loginPage.getPageMessage().should.be.equal(passwordErrorMessage);
 
-        // Submit blank form
+        // Submit blank form to generate message.
         loginPage.enterLoginInformation('', '');
         loginPage.clickSubmitButton();
         loginPage.getPageMessage().should.be.equal(usernameErrorMessage);
