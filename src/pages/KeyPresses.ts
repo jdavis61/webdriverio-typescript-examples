@@ -6,7 +6,7 @@ export default class KeyPresses extends BasePage {
         super();
     }
 
-    get result() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get result() :WebdriverIO.Element {
         return browser.$(selectors.result);
     }
 

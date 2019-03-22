@@ -1,20 +1,20 @@
 {
     "compilerOptions": {
-        "target": "es6",
+        "target": "ES2015",
         "module": "commonjs",
-        "moduleResolution": "node",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": true,
-        "noImplicitAny": false,
+        "baseUrl": ".",
+        "paths": {
+            "*": [ "./*" ],
+            "src/*": ["./src/*"]
+        },
+        "types": ["node", "@wdio/sync", "@wdio/mocha-framework"],
+        "experimentalDecorators": true, 
+        "emitDecoratorMetadata": true
     },
     "include": [
-      "src/pages/**/*",
-      "src/test/**/*",
-      "src/interfaces/**/*",
+        "./src/**/*.ts"
     ],
     "exclude": [
-        "node_modules",
         "src/concepts"
     ]
 }

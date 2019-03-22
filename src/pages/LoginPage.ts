@@ -9,15 +9,15 @@ export default class LoginPage extends BasePage implements ILoginPage {
         super();
     }
 
-    get username() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get username() : WebdriverIO.Element {
         return browser.$(loginSelectors.usernameLocator);
     }
 
-    get password() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get password() : WebdriverIO.Element {
         return browser.$(loginSelectors.passwordLocator);
     }
 
-    get loginButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get loginButton() : WebdriverIO.Element {
         return browser.$(loginSelectors.loginButtonLocator);
     }
 
@@ -43,7 +43,7 @@ export default class LoginPage extends BasePage implements ILoginPage {
         const securedScreenPresenceLocator = 'a.radius';
         this.enterLoginInformation(usernameValue, passwordValue);
         this.clickSubmitButton();
-        browser.waitForVisible(securedScreenPresenceLocator);
+        browser.$(securedScreenPresenceLocator).waitForDisplayed();
         return new SecuredPage();
     }
 }

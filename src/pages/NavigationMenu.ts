@@ -3,7 +3,6 @@ import Checkboxes from './Checkboxes';
 import HoversPage from './HoversPage';
 import JavaScriptAlerts from './JavaScriptAlerts';
 import KeyPresses from './KeyPresses';
-import NestedFrames from './NestedFrames';
 
 const presenceLocators = require('../selectors/screenPresenceLocators.json');
 
@@ -15,37 +14,31 @@ export default class NavigationMenu {
 
     public loadFormAuthenticationPage() : LoginPage {
         browser.url('/login');
-        browser.waitForVisible(presenceLocators.login);
+        browser.$(presenceLocators.login).waitForDisplayed();
         return new LoginPage();
     }
 
     public loadCheckboxesPage() : Checkboxes {
         browser.url('/checkboxes');
-        browser.waitForVisible(presenceLocators.checkboxes);
+        browser.$(presenceLocators.checkboxes).waitForDisplayed();
         return new Checkboxes();
     }
 
     public loadHoversPage() : HoversPage {
         browser.url('/hovers');
-        browser.waitForVisible(presenceLocators.hovers);
+        browser.$(presenceLocators.hovers).waitForDisplayed();
         return new HoversPage();
     }
 
     public loadJavaScriptAlertsPage() : JavaScriptAlerts {
         browser.url('/javascript_alerts');
-        browser.waitForVisible(presenceLocators.javascriptAlertPage);
+        browser.$(presenceLocators.javascriptAlertPage).waitForDisplayed();
         return new JavaScriptAlerts();
     }
 
     public loadKeyPressesPage() : KeyPresses {
         browser.url('/key_presses');
-        browser.waitForVisible(presenceLocators.keyPresses);
+        browser.$(presenceLocators.keyPresses).waitForDisplayed();
         return new KeyPresses();
-    }
-
-    public loadNestedFramesPage() : NestedFrames {
-        browser.url('/nested_frames');
-        browser.waitForVisible(presenceLocators.nestedFrames);
-        return new NestedFrames();
     }
 }

@@ -7,14 +7,14 @@ export default class SecuredPage extends BasePage {
         super();
     }
 
-    public get logoutButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    public get logoutButton() : WebdriverIO.Element {
         const logoutButtonLocator: string = 'a.radius';
         return $(logoutButtonLocator);
     }
 
     public clickLogout() : LoginPage {
         this.logoutButton.click();
-        browser.waitForVisible(screenLocators.login);
+        browser.$(screenLocators.login).waitForDisplayed();
         return new LoginPage();
     }
 }

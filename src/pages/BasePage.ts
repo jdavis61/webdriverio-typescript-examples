@@ -1,19 +1,19 @@
 const locators = require('../selectors/basePage.json');
 
 export default class BasePage {
-    public get subheader() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    public get subheader() : WebdriverIO.Element {
         return browser.$(locators.pageSubHeaderLocator);
     }
 
-    public get footerText() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    public get footerText() : WebdriverIO.Element {
         return browser.$(locators.footerTextLocator);
     }
 
-    public get pageMessage() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    public get pageMessage() : WebdriverIO.Element {
         return browser.$(locators.pageMessageLocator);
     }
 
-    public get closeButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    public get closeButton() : WebdriverIO.Element {
         return browser.$(locators.closeButton);
     }
 
@@ -40,6 +40,6 @@ export default class BasePage {
 
     public closePageMessage() : void {
         this.closeButton.click();
-        browser.waitUntil(() => !this.closeButton.isVisible());
+        browser.waitUntil(() => !this.closeButton.isDisplayed());
     }
 }

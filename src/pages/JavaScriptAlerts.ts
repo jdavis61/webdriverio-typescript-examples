@@ -6,15 +6,15 @@ export default class JavaScriptAlerts extends BasePage {
         super();
     }
 
-    get jsAlertButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get jsAlertButton() : WebdriverIO.Element {
         return browser.$(selectors.jsAlertButtonLocator);
     }
 
-    get jsConfirmButton() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get jsConfirmButton() : WebdriverIO.Element {
         return browser.$(selectors.jsConfirmButtonLocator);
     }
 
-    get result() : WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>> {
+    get result() : WebdriverIO.Element {
         return browser.$(selectors.resultLocator);
     }
 
@@ -31,6 +31,6 @@ export default class JavaScriptAlerts extends BasePage {
     }
 
     closeAlert() : void {
-        browser.alertAccept();
+        browser.acceptAlert();
     }
 }

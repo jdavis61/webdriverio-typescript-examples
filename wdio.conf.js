@@ -1,5 +1,12 @@
 exports.config = {
-
+    //
+    // ====================
+    // Runner Configuration
+    // ====================
+    //
+    // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
+    // on a remote machine).
+    runner: 'local',
     //
     // ==================
     // Specify Test Files
@@ -57,7 +64,7 @@ exports.config = {
     sync: true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'silent',
+    logLevel: 'error',
     //
     // Enables colors for log output.
     coloredLogs: true,
@@ -125,7 +132,10 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        compilers: ['ts:ts-node/register'],
+        ui: 'bdd',
+        require: [
+            'tsconfig-paths/register'
+        ],
         timeout: 9999999
     },
     //
@@ -149,16 +159,11 @@ exports.config = {
     // Gets executed before test execution begins. At this point you can access all global
     // variables, such as `browser`. It is the perfect place to define custom commands.
     before: function () {
-        const width = browser.execute(() => {
-            return window.screen.availWidth;
-        }).value;
-        const height = browser.execute(() => {
-            return window.screen.availHeight;
-        }).value;
-        browser.windowHandleSize({width, height});
-
+        browser.maximizeWindow();
         var chai = require('chai');
         chai.Should();
+
+        require('ts-node').register({ files: true });
     },
     //
     // Hook that gets executed before the suite starts

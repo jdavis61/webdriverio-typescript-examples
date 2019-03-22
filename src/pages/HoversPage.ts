@@ -7,20 +7,20 @@ export default class HoversPage extends BasePage {
         super();
     }
 
-    get captions() : Array<WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>> {
+    get captions() : WebdriverIO.Element[] {
         const captionsLocator = '.figcaption';
         return browser.$$(captionsLocator);
     }
 
-    get figures() : Array<WebdriverIO.Client<WebdriverIO.RawResult<WebdriverIO.Element>>> {
+    get figures() : WebdriverIO.Element[] {
         const figureLocator = '.figure';
         return browser.$$(figureLocator);
     }
 
     hoverOverImage(position: number) : void {
         const figure = this.figures[position];
-        figure.moveToObject('img');
-        this.captions[position].waitForVisible();
+        figure.$('img').moveTo();
+        this.captions[position].waitForDisplayed();
     }
 
     clickViewProfile(position) : void {
@@ -28,12 +28,12 @@ export default class HoversPage extends BasePage {
         const captionSection = this.captions[position];
         const link = captionSection.$('a');
         link.click();
-        browser.waitForVisible(screenPresenceLocators.userprofile);
+        browser.$(screenPresenceLocators.userprofile).waitForDisplayed();
     }
 
     returnToHoversPage() : void {
         browser.back();
-        browser.waitForVisible(screenPresenceLocators.hovers);
+        browser.$(screenPresenceLocators.hovers).waitForDisplayed();
     }
 
     getUserName(position: number) {
