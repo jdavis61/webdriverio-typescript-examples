@@ -1,5 +1,6 @@
 import { assert } from 'chai';
 import NavigationMenu from '../pages/NavigationMenu';
+import LoginPage from 'src/pages/LoginPage';
 
 const pageProperties = require('../config/messages.json');
 
@@ -11,7 +12,7 @@ const usernameErrorMessage = 'Your username is invalid!';
 const passwordErrorMessage = 'Your password is invalid!';
 
 describe('Login functionality test suite', () => {
-    let loginPage;
+    let loginPage: LoginPage;
     before('setup', () => {
         const navMenu: NavigationMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();

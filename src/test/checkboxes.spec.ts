@@ -2,7 +2,7 @@ import NavigationMenu from '../pages/NavigationMenu';
 
 // Test
 describe('Checkboxes test', () => {
-    let navMenu;
+    let navMenu: NavigationMenu;
     before('setup', () => {
         navMenu = new NavigationMenu();
     });

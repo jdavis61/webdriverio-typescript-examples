@@ -1,8 +1,8 @@
 import NavigationMenu from '../pages/NavigationMenu';
+import JavaScriptAlerts from 'src/pages/JavaScriptAlerts';
 
 describe('JavaScript alerts test', () => {
-
-    let jsAlert;
+    let jsAlert: JavaScriptAlerts;
     before('setup', () => {
         const navMenu: NavigationMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();
