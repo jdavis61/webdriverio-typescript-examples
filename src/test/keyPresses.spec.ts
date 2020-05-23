@@ -1,4 +1,5 @@
 import NavigationMenu from '../pages/NavigationMenu';
+import KeyPresses from 'src/pages/KeyPresses';
 require('it-each')();
 require('it-each')({ testPerIteration: true });
 
@@ -6,7 +7,7 @@ const keys = ['F5', 'a', '1', 'b', 'Alt', 'Shift'];
 
 // Valid keys found here https://w3c.github.io/webdriver/#keyboard-actions.
 describe('Key presses test', () => {
-    let keyPressesPage;
+    let keyPressesPage: KeyPresses;
     before('setup', () => {
         const navMenu = new NavigationMenu();
         navMenu.loadNavigationMenu();
