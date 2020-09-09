@@ -1,5 +1,5 @@
 # webdriverio-typescript-examples
-This repo contains examples of how to create page objects and tests using [WebdriverIO 5.0](https://github.com/webdriverio/webdriverio/tree/master/packages) and [TypeScript](https://www.typescriptlang.org/). The application under test is tourdedave's "[the-internet](https://github.com/tourdedave/the-internet)" project which contains examples of hard to automate pages. The test runner is the [wdio-mocha-framework](https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-mocha-framework). 
+This repo contains examples of how to create page objects and tests using [WebdriverIO 6.0](https://github.com/webdriverio/webdriverio) and [TypeScript](https://www.typescriptlang.org/). The application under test is tourdedave's "[the-internet](https://github.com/tourdedave/the-internet)" project which contains examples of hard to automate pages. The test runner is the [wdio-mocha-framework](https://github.com/webdriverio/webdriverio/tree/master/packages/wdio-mocha-framework). 
 
 This project was created to serve as a reference to others interested in WebdriverIO TypeScript tests.
 
