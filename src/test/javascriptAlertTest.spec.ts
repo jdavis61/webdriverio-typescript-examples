@@ -13,7 +13,7 @@ describe('JavaScript alerts test', () => {
         jsAlert.getPageHeader().should.be.equal('JavaScript Alerts');
         jsAlert.clickJSAlertButton();
         jsAlert.closeAlert();
-        jsAlert.getResult().should.be.equal('You successfuly clicked an alert');
+        jsAlert.getResult().should.be.equal('You successfully clicked an alert');
     });
 
     it('JavaScript confirm test', () => {
