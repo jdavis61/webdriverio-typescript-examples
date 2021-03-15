@@ -2,14 +2,13 @@
     "compilerOptions": {
         "target": "ES2015",
         "module": "commonjs",
+        "esModuleInterop": true,
         "baseUrl": ".",
         "paths": {
             "*": [ "./*" ],
             "src/*": ["./src/*"]
         },
-        "types": ["node", "@wdio/sync", "@wdio/mocha-framework"],
-        "experimentalDecorators": true, 
-        "emitDecoratorMetadata": true
+        "types": ["node", "webdriverio/sync", "@wdio/mocha-framework"],
     },
     "include": [
         "./src/**/*.ts"
