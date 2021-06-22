@@ -7,7 +7,7 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    sync: true,
+    sync: false,
     //
     // ==================
     // Specify Test Files
@@ -126,9 +126,6 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        require: [
-            'tsconfig-paths/register'
-        ],
         timeout: 180000
     },
     //
