@@ -41,6 +41,15 @@ exports.config = {
     // from the same test should run tests.
     //
     maxInstances: 1,
+    autoCompileOpts: {
+        autoCompile: true,
+        // see https://github.com/TypeStrong/ts-node#cli-and-programmatic-options
+        // for all available options
+        tsNodeOpts: {
+            transpileOnly: true,
+            project: 'tsconfig.json'
+        }
+    }, 
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
