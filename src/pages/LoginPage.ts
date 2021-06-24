@@ -2,7 +2,7 @@ import BasePage from './BasePage';
 import SecuredPage from './SecuredPage';
 import ILoginPage from '../interfaces/ILoginPage';
 
-const loginSelectors = require('../selectors/login.json');
+const selectors = require('../selectors/uimap.json');
 
 export default class LoginPage extends BasePage implements ILoginPage {
     constructor() {
@@ -10,15 +10,15 @@ export default class LoginPage extends BasePage implements ILoginPage {
     }
 
     get username() : WebdriverIO.Element {
-        return browser.$(loginSelectors.usernameLocator);
+        return browser.$(selectors.login.usernameLocator);
     }
 
     get password() : WebdriverIO.Element {
-        return browser.$(loginSelectors.passwordLocator);
+        return browser.$(selectors.login.passwordLocator);
     }
 
     get loginButton() : WebdriverIO.Element {
-        return browser.$(loginSelectors.loginButtonLocator);
+        return browser.$(selectors.login.loginButtonLocator);
     }
 
     enterLoginInformation(usernameValue, passwordValue) : void {

@@ -1,6 +1,6 @@
 import BasePage from './BasePage';
 import LoginPage from './LoginPage';
-const screenLocators = require('../selectors/screenPresenceLocators.json');
+const screenLocators = require('../selectors/uimap.json');
 
 export default class SecuredPage extends BasePage {
     constructor() {

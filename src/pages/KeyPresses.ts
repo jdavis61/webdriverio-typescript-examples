@@ -1,5 +1,5 @@
 import BasePage from './BasePage';
-const selectors = require('../selectors/KeyPresses.json');
+const selectors = require('../selectors/uimap.json');
 
 export default class KeyPresses extends BasePage {
     constructor() {
@@ -7,7 +7,7 @@ export default class KeyPresses extends BasePage {
     }
 
     get result() :WebdriverIO.Element {
-        return browser.$(selectors.result);
+        return browser.$(selectors.keyPresses.result);
     }
 
     getResultText() : string {

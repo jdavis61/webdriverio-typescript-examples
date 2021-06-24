@@ -1,7 +1,0 @@
-{
-    "topFrame": "frame[name='frame-top']",
-    "bottomFrame": "frame[name='frame-bottom']",
-    "leftFrame": "frame[name='frame-left']",
-    "middleFrame": "frame[name='frame-middle']",
-    "rightFrame": "frame[name='frame-right']"
-}

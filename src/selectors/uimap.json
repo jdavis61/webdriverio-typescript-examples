@@ -1,0 +1,43 @@
+{
+    "basePage": {
+        "pageSubHeaderLocator": ".subheader",
+        "footerTextLocator": "#page-footer",
+        "pageMessageLocator": ".flash",
+        "h2Selector": "div.example h2",
+        "h3Selector": "div.example h3",
+        "closeButton": "#flash > .close"
+    },
+    "javascriptAlerts": {
+        "jsAlertButtonLocator": "button[onclick='jsAlert()']",
+        "jsConfirmButtonLocator": "button[onclick='jsConfirm()']",
+        "resultLocator": "#result"
+    },
+    "keyPresses": {
+        "result": "#result"
+    },
+    "login": {
+        "usernameLocator": "#username",
+        "passwordLocator": "#password",
+        "loginButtonLocator": "button.radius"
+    },
+    "messages": {
+        "loginSubheader": "This is where you can log into the secure area. Enter tomsmith for the username and SuperSecretPassword! for the password. If the information is wrong you should see error messages."
+    },
+    "nestedFrames": {
+        "topFrame": "frame[name='frame-top']",
+        "bottomFrame": "frame[name='frame-bottom']",
+        "leftFrame": "frame[name='frame-left']",
+        "middleFrame": "frame[name='frame-middle']",
+        "rightFrame": "frame[name='frame-right']"
+    },
+    "screenPresenceLocators": {
+        "login": "#username",
+        "securedPage": "a.radius",
+        "checkboxes": "#checkboxes",
+        "hovers": ".figure",
+        "userprofile": "#c",
+        "javascriptAlertPage": "button[onclick='jsConfirm()']",
+        "keyPresses": "//*[text() = 'Key Presses']",
+        "nestedFrames": "frame[name='frame-top']"
+    }        
+}

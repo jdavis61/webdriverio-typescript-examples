@@ -1,5 +1,5 @@
 import BasePage from './BasePage';
-const selectors = require('../selectors/javascriptAlerts.json');
+const selectors = require('../selectors/uimap.json');
 
 export default class JavaScriptAlerts extends BasePage {
     constructor() {
@@ -7,15 +7,15 @@ export default class JavaScriptAlerts extends BasePage {
     }
 
     get jsAlertButton() : WebdriverIO.Element {
-        return browser.$(selectors.jsAlertButtonLocator);
+        return browser.$(selectors.javascriptAlerts.jsAlertButtonLocator);
     }
 
     get jsConfirmButton() : WebdriverIO.Element {
-        return browser.$(selectors.jsConfirmButtonLocator);
+        return browser.$(selectors.javascriptAlerts.jsConfirmButtonLocator);
     }
 
     get result() : WebdriverIO.Element {
-        return browser.$(selectors.resultLocator);
+        return browser.$(selectors.javascriptAlerts.resultLocator);
     }
 
     clickJSAlertButton() : void {

@@ -1,5 +1,5 @@
 import BasePage from './BasePage';
-const screenPresenceLocators = require('../selectors/screenPresenceLocators.json');
+const locators = require('../selectors/uimap.json');
 
 export default class HoversPage extends BasePage {
 
@@ -28,12 +28,12 @@ export default class HoversPage extends BasePage {
         const captionSection = this.captions[position];
         const link = captionSection.$('a');
         link.click();
-        browser.$(screenPresenceLocators.userprofile).waitForDisplayed();
+        browser.$(locators.screenPresenceLocators.userprofile).waitForDisplayed();
     }
 
     returnToHoversPage() : void {
         browser.back();
-        browser.$(screenPresenceLocators.hovers).waitForDisplayed();
+        browser.$(locators.screenPresenceLocators.hovers).waitForDisplayed();
     }
 
     getUserName(position: number) {

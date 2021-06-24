@@ -4,7 +4,7 @@ import HoversPage from './HoversPage';
 import JavaScriptAlerts from './JavaScriptAlerts';
 import KeyPresses from './KeyPresses';
 
-const presenceLocators = require('../selectors/screenPresenceLocators.json');
+const selectors = require('../selectors/uimap.json');
 
 export default class NavigationMenu {
 
@@ -14,31 +14,31 @@ export default class NavigationMenu {
 
     public loadFormAuthenticationPage() : LoginPage {
         browser.url('/login');
-        browser.$(presenceLocators.login).waitForDisplayed();
+        browser.$(selectors.screenPresenceLocators.login).waitForDisplayed();
         return new LoginPage();
     }
 
     public loadCheckboxesPage() : Checkboxes {
         browser.url('/checkboxes');
-        browser.$(presenceLocators.checkboxes).waitForDisplayed();
+        browser.$(selectors.screenPresenceLocators.checkboxes).waitForDisplayed();
         return new Checkboxes();
     }
 
     public loadHoversPage() : HoversPage {
         browser.url('/hovers');
-        browser.$(presenceLocators.hovers).waitForDisplayed();
+        browser.$(selectors.screenPresenceLocators.hovers).waitForDisplayed();
         return new HoversPage();
     }
 
     public loadJavaScriptAlertsPage() : JavaScriptAlerts {
         browser.url('/javascript_alerts');
-        browser.$(presenceLocators.javascriptAlertPage).waitForDisplayed();
+        browser.$(selectors.screenPresenceLocators.javascriptAlertPage).waitForDisplayed();
         return new JavaScriptAlerts();
     }
 
     public loadKeyPressesPage() : KeyPresses {
         browser.url('/key_presses');
-        browser.$(presenceLocators.keyPresses).waitForDisplayed();
+        browser.$(selectors.screenPresenceLocators.keyPresses).waitForDisplayed();
         return new KeyPresses();
     }
 }

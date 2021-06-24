@@ -1,26 +1,26 @@
-const locators = require('../selectors/basePage.json');
+const locators = require('../selectors/uimap.json');
 
 export default class BasePage {
     public get subheader() : WebdriverIO.Element {
-        return browser.$(locators.pageSubHeaderLocator);
+        return browser.$(locators.basePage.pageSubHeaderLocator);
     }
 
     public get footerText() : WebdriverIO.Element {
-        return browser.$(locators.footerTextLocator);
+        return browser.$(locators.basePage.footerTextLocator);
     }
 
     public get pageMessage() : WebdriverIO.Element {
-        return browser.$(locators.pageMessageLocator);
+        return browser.$(locators.basePage.pageMessageLocator);
     }
 
     public get closeButton() : WebdriverIO.Element {
-        return browser.$(locators.closeButton);
+        return browser.$(locators.basePage.closeButton);
     }
 
     public getPageHeader() : string {
         const h2Selector: string = 'div.example h2';
         const h3Selector: string = 'div.example h3';
-        if (browser.$$(locators.h2Selector).length > 0) {
+        if (browser.$$(locators.basePage.h2Selector).length > 0) {
             return $(h2Selector).getText();
         }
         return browser.$(h3Selector).getText();
